@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.wrapper {
+  background: #333333;
+  height: 100vh;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px; }
+
+.board {
+  overflow: auto;
+  background: #007eff;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  padding-left: 5px; }
+  .board .board-header {
+    font-family: "Roboto Mono", monospace;
+    font-size: 28px;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.2);
+    font-weight: 700;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 0 10px 20px; }
+  .board .board-list {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .board .list {
+    width: 270px;
+    height: 100%;
+    background: #fffa69;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4px 10px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.23);
+    box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.23);
+    margin-right: 20px;
+    position: relative; }
+    .board .list .list-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 10px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-right: 5px; }
+      .board .list .list-header input {
+        font-family: "Roboto Mono", monospace;
+        border: none;
+        font-size: 17px;
+        outline: none;
+        max-width: 228px;
+        background: none;
+        font-weight: 700;
+        color: rgba(51, 51, 51, 0.95); }
+      .board .list .list-header #show_list {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; }
+        .board .list .list-header #show_list:hover {
+          -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          transform: scale(1.05); }
+        .board .list .list-header #show_list:active {
+          -webkit-transform: scale(0.95);
+          -ms-transform: scale(0.95);
+          transform: scale(0.95); }
+    .board .list .list-board {
+      min-height: 15px; }
+    .board .list .list-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      background: white;
+      font-family: "Roboto Mono", monospace;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 3px 0 3px 10px;
+      margin-bottom: 7px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 0 5px 0px rgba(51, 51, 51, 0.06);
+      box-shadow: 0 0 5px 0px rgba(51, 51, 51, 0.06);
+      position: relative; }
+      .board .list .list-item:hover {
+        background: #fafafa;
+        cursor: pointer; }
+      .board .list .list-item .item-zag {
+        font-weight: 600;
+        font-size: 15px;
+        color: rgba(51, 51, 51, 0.95);
+        background: none;
+        margin-bottom: 5px;
+        border: none;
+        outline: none;
+        resize: none;
+        display: block;
+        max-height: 22px;
+        cursor: pointer; }
+      .board .list .list-item .delete-item {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        right: -2px;
+        top: -1px;
+        cursor: pointer; }
+        .board .list .list-item .delete-item:hover {
+          -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          transform: scale(1.05); }
+        .board .list .list-item .delete-item:active {
+          -webkit-transform: scale(0.95);
+          -ms-transform: scale(0.95);
+          transform: scale(0.95); }
+      .board .list .list-item .time {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .board .list .list-item .time .calendar {
+          font-size: 13px;
+          color: rgba(51, 51, 51, 0.64);
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          outline: none;
+          background: none;
+          width: 80px; }
+        .board .list .list-item .time .cal_img {
+          width: 15px;
+          height: 13px;
+          margin-right: 5px; }
+    .board .list .new-list-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin: 10px auto;
+      cursor: pointer;
+      width: 65%;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .board .list .new-list-item:hover {
+        -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        transform: scale(1.01); }
+        .board .list .new-list-item:hover p {
+          color: rgba(51, 51, 51, 0.75); }
+      .board .list .new-list-item:active {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); }
+      .board .list .new-list-item p {
+        font-size: 15px;
+        color: rgba(51, 51, 51, 0.64);
+        font-weight: 600;
+        margin-right: 5px; }
+      .board .list .new-list-item img {
+        height: 16px;
+        width: 16px; }
+    .board .list #list_delete {
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      right: -8px;
+      top: -8px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .board .list #list_delete:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
+      .board .list #list_delete:active {
+        -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95); }
+  .board .new_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 240px;
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid rgba(51, 51, 51, 0.15);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .board .new_list:hover {
+      -webkit-transform: scale(1.005);
+      -ms-transform: scale(1.005);
+      transform: scale(1.005); }
+      .board .new_list:hover p {
+        color: #f0f0f0; }
+    .board .new_list:active {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+    .board .new_list img {
+      width: 26px;
+      height: 26px; }
+    .board .new_list p {
+      color: white;
+      font-family: "Roboto Mono", monospace;
+      font-size: 14px;
+      margin: 0px 12px; }
+
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 0px; }
+
+::-webkit-scrollbar-track {
+  background-color: #32312e;
+  -webkit-box-shadow: 0px 0px 3px #000 inset;
+  box-shadow: 0px 0px 3px #000 inset; }
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ffcb17;
+  -webkit-box-shadow: 0px 1px 1px #fff inset;
+  box-shadow: 0px 1px 1px #fff inset;
+  background-image: url("https://yraaa.ru/_pu/24/59610063.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0px; }
+
+::-webkit-scrollbar {
+  width: 11px; }

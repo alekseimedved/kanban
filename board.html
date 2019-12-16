@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kanban board</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="ui/jquery-ui.theme.min.css">
+    <script src="lib/jquery-3.3.1.js"></script>
+    <script src="ui/jquery-ui.js"></script>
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="board">
+            <div class="board-header">
+                Задачи
+            </div>
+            <div class="board-list">
+<!--
+                <div class="list">
+                    <div class="list-header">
+                        <input type="text" placeholder="Новая задача" value="Новая задача" maxlength="26">
+                        <img src="pics/up-arrow.png" id="show_list">
+                    </div>
+                    <div class="list-board" id="sortContainer">
+                        <div class="list-item sortable" id="item1">
+                            <textarea  rows="1" cols="20" wrap="hard" class="item-zag " maxlength="40" disabled>Новый пункт</textarea>
+                            <div class="time">
+                                <img src="pics/stopwatch.png" class="cal_img">
+                                <input type="text" class="calendar datepicker" name="date" value="05.11.2019" disabled >
+                            </div>
+                            <img src="pics/delete.png" class="delete-item">
+                        </div>
+                        <div class="list-item sortable" id="item2">
+                            <textarea  rows="1" cols="20" wrap="hard" class="item-zag" maxlength="40">Новый пункт</textarea>
+                            <div class="time">
+                                <img src="pics/stopwatch.png">
+                                <input type="text" data-range="true" data-multiple-dates-separator=" - " class="datepicker" value="05.11.2019" disabled />
+                            </div>
+                            
+                        </div>
+                        <div class="new-list-item">
+                            <p>Добавить пункт</p>
+                            <img src="pics/plus.png">
+                        </div>
+                    </div>
+                    <img src="pics/delete.png" id="list_delete">
+                </div>  
+                
+                <div class="list">
+                    <div class="list-header">
+                        <input type="text" placeholder="Новая задача" value="Новая задача" maxlength="26">
+                        <img src="pics/up-arrow.png" id="show_list">
+                    </div>
+                    <div class="list-board" id="sort2Container">
+                       <div class="list-item sortable ui-state-error" id="item1">
+                            <textarea  rows="1" cols="20" wrap="hard" class="item-zag " maxlength="40" disabled>Новый пункт</textarea>
+                            <div class="time">
+                                <img src="pics/stopwatch.png" class="cal_img">
+                                <input type="text" class="calendar datepicker" name="date" value="05.11.2019" disabled >
+                            </div>
+                            <img src="pics/delete.png" class="delete-item">
+                        </div>
+                    </div>
+                    <div class="new-list-item">
+                        <p>Добавить пункт</p>
+                        <img src="pics/plus.png">
+                    </div>
+                    <img src="pics/delete.png" id="list_delete">
+                </div> 
+                
+                <div class="list">
+                    <div class="list-header">
+                        <input type="text" placeholder="Новая задача" value="Новая задача" maxlength="26">
+                        <img src="pics/up-arrow.png" id="show_list">
+                    </div>
+                    <div class="list-board" id="sort3Container">
+                       <div class="list-item sortable ui-state-error" id="item1">
+                            <textarea  rows="1" cols="20" wrap="hard" class="item-zag " maxlength="40" disabled>Новый пункт</textarea>
+                            <div class="time">
+                                <img src="pics/stopwatch.png" class="cal_img">
+                                <input type="text" class="calendar datepicker" name="date" value="05.11.2019" disabled >
+                            </div>
+                            <img src="pics/delete.png" class="delete-item">
+                        </div>
+                    </div>
+                    <div class="new-list-item">
+                        <p>Добавить пункт</p>
+                        <img src="pics/plus.png">
+                    </div>
+                    <img src="pics/delete.png" id="list_delete">
+                </div>   
+-->
+                
+            
+<!--
+                <div class="new_list">
+                    <p>Создать новую задачу</p>
+                    <img src="pics/plus.png" alt="add">
+                </div>
+-->
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script src="js/getTask.js"></script>
+<script src="js/addTask.js"></script>
+<script src="js/cud.js"></script>
+<script src="js/drag.js"></script>
+<script src="js/main.js"></script>
+</html>
