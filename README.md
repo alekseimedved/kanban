@@ -1,2 +1,1 @@
-# kanban
-kanban board
+# medvedkanban.github.io
